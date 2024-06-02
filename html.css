@@ -1,48 +1,106 @@
-body{ margin: 0;padding: 0;}
-section { padding: 100px 0; height: 80vh;}
 :-webkit-any(article, aside, nav, section) h1, h2, h3, h4, h5, h6 { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0;}
+body { margin: 0;padding: 0;}
+section { padding: 100px 0; height: 80vh;}
 p { font-size: 20px; font-weight: 400; margin: 0px; color: rgb(59, 59, 59);}
-.home-section {position: relative; flex-direction: column; margin:0 auto;justify-content: center; display: flex; max-width:1350px; height: 80vh;}
-.title{ align-items: center; }
-.topnav { overflow: hidden;position: fixed; display: flex; align-items: center;justify-content: center; width: 100%;}
-.topnav .logo { padding: 20px; width: 60px;}
-.shape1 {-webkit-animation: 1s ease 0s normal forwards 1 fadein; animation: 1s ease 0s normal forwards 1 fadein;position: absolute; left: 10%; bottom: 15%; z-index: 3;}
-.shape2 {-webkit-animation: 1s ease 0s normal forwards 1 fadein; animation: 1s ease 0s normal forwards 1 fadein;position: absolute; right: 7%;z-index: 3;}
-.shape3-p {-webkit-animation: 1s ease 0s normal forwards 1 fadein; width: 300px; height: 300px; border-radius: 15px 15px 50% 50%; animation: 1s ease 0s normal forwards 1 fadein;position: relative; overflow: hidden; z-index: -1;}
-.shape3  { left: -2%; top: -5%; position: absolute;rotate: -10deg; animation: bounce 4s ease-in-out infinite;}
-.shape3 .leaf {position: absolute; width: 600px;}
-.shape4-p {-webkit-animation: 1s ease 0s normal forwards 1 fadein; width: 300px; height: 250px; border-radius: 15px 15px 80% 15px; animation: 1s ease 0s normal forwards 1 fadein;position: relative; overflow: hidden; z-index: -1;}
-.shape4 { right: -2%; bottom: -5%; position: absolute;rotate: -80deg; animation: bounce 5s ease-in-out infinite;}
-.container{background-color: black; border-radius: 80px; height: 1600px; margin: 0 auto; padding: 30px 20px;}
-.text-rotate { display: inline-block; position: relative;}
-.title-2{ display: flex;align-items: center; justify-content: space-between;color: #fff;}
-.title-2 h2 { font-size: 30px;}
-.title-2 p {text-align: left; color: #fff;}
-.bg-padding { padding: 40px;}
-.bg-padding:hover .stack .card1 {animation-delay: 1s; animation: 0.2s ease-in-out fadein;}
-.bg-padding:hover .stack .card2 { animation-delay: 2s; animation: 0.4s ease-in-out fadein;}
-.bg-padding:hover .stack .card3 { animation-delay: 3s; animation: 0.6s ease-in-out fadein;}
-.stack {display: flex; flex-direction: row; gap: 20px; box-sizing: border-box; align-items: stretch; margin: 80px 0; justify-content: space-around;}
-.card {background-color: #434343; width: 32.33%; border-radius: 40px; transition: 0.4s ease-in-out; height: 500px; position: relative;}
-.card h1 { color: #adff08; font-size: 45px; padding: 10px 25px; text-align: left; line-height: 1.1;}
-.card p { color: aliceblue; margin-top: 20px; font-weight: 200; line-height: 1.6; font-size: 18px; text-align: justify; font-family: sans-serif; padding: 0 36px;}
-.card .arrow{ transition: 0.4s ease-in-out; display: none; animation: 0.4s ease-in-out fadeinarrow ; position: absolute; width: 110px; height: 110px; bottom: 1px; border-radius: 50%; left: 1px; background-color: #adff08; border: 7px solid black;}
+.p-relative {position: relative;}
+
+/* Home Banner */
+.home-section { position: relative; flex-direction: column; margin:0 auto;justify-content: center; display: flex; max-width:1350px; height: 80vh;
+  h1 { font-size: 105px; margin: 0px; -webkit-animation: 2.5s ease 0s normal forwards 1 fadein; text-align: center; animation: 2.5s ease 0s normal forwards 1 fadein;}
+  p { -webkit-animation: 4s ease 0s normal forwards 1 fadein; animation: 4s ease 0s normal forwards 1 fadein;text-align: center;}
+}
+.title-rotate { display: inline-block; position: relative;
+  img { top: 0; transform: translateX(10px) translateY(-30%); width: 50px; padding: 20px; background-color: #adff08; border-radius: 30px; height: 50px;animation: rotate 2s linear infinite;}
+}
+.bg-title { padding: 0px 20px 10px 20px; border-radius: 15px; background-color: #adff08; color: #fff;}
+
+/* Nav */
+.topnav { overflow: hidden;position: fixed; display: flex; align-items: center;justify-content: center; width: 100%;
+  .logo { padding: 20px; width: 60px;}
+}
+
+/* Shapes */
+.shape1 { -webkit-animation: 1s ease 0s normal forwards 1 fadein; animation: 1s ease 0s normal forwards 1 fadein;position: absolute; left: 10%; bottom: 15%; z-index: 3;}
+.shape2 { -webkit-animation: 1s ease 0s normal forwards 1 fadein; animation: 1s ease 0s normal forwards 1 fadein;position: absolute; right: 7%;z-index: 3;}
+.shape3 { left: -2%; top: -5%; position: absolute;rotate: -10deg; animation: bounce 4s ease-in-out infinite;
+  .shape3-p { -webkit-animation: 1s ease 0s normal forwards 1 fadein; width: 300px; height: 300px; border-radius: 15px 15px 50% 50%; animation: 1s ease 0s normal forwards 1 fadein;position: relative; overflow: hidden; z-index: -1;
+    .leaf { position: absolute; width: 600px;}
+  }
+}
+.shape4 { right: -2%; bottom: -5%; position: absolute;rotate: -80deg; animation: bounce 5s ease-in-out infinite;
+  .shape4-p {-webkit-animation: 1s ease 0s normal forwards 1 fadein; width: 300px; height: 250px; border-radius: 15px 15px 80% 15px; animation: 1s ease 0s normal forwards 1 fadein;position: relative; overflow: hidden; z-index: -1;
+    .leaf {position: absolute; width: 600px;} 
+  }
+}
+
+/* Stack1 */
+.bg-padding { padding: 70px; border-radius: 80px; height: auto;}
+.bg-padding:hover { .stack .card1 {animation-delay: 1s; animation: 0.2s ease-in-out fadein;}
+  .stack .card2 { animation-delay: 2s; animation: 0.4s ease-in-out fadein;}
+  .stack .card3 { animation-delay: 3s; animation: 0.6s ease-in-out fadein;}
+}
+.title { display: flex;align-items: center; justify-content: space-between;
+  h2 { font-size: 42px; color: #fff;}
+  p { text-align: end; color: #fff;}
+}
+.stack { display: flex; flex-direction: row; gap: 20px; box-sizing: border-box; align-items: stretch; margin: 80px 0; justify-content: space-between;}
+.card { background-color: #434343; width: 32.33%; border-radius: 40px; transition: 0.4s ease-in-out; height: 500px; position: relative;
+  h1 { color: #adff08; font-size: 45px; padding: 10px 25px; text-align: left; line-height: 1.1;}
+  p { color: aliceblue; margin-top: 20px; font-weight: 200; line-height: 1.6; font-size: 18px; text-align: justify; font-family: sans-serif; padding: 0 36px;}
+  .arrow { transition: 0.4s ease-in-out; display: none; animation: 0.4s ease-in-out fadeinarrow ; position: absolute; width: 110px; height: 110px; bottom: 1px; border-radius: 50%; left: 1px; background-color: #adff08; border: 7px solid black;}
+}
+.card:hover { background-color: rgb(62, 62, 248);border-radius: 40px 40px 40px 230px; transition: 0.4s ease-in-out;
+  .card-img { border-radius: 20px 20px 20px 280px; transition: 0.4s ease-in-out;}
+  .card-icon img { display: none;}
+  .arrow { display: block; position: absolute; transition: 0.4s ease-in-out; animation: 0.4s ease-in-out fadeinarrow }
+  .arrow p { display: block; color: #434343; animation: 0.8s ease-in-out rotatearrow; transform: rotate(-40deg);}
+}
 .card-img { position: relative; overflow: hidden; height: 230px; border-radius: 20px; margin: 20px; transition: 0.4s ease-in-out;}
 .card-title { display: flex; justify-content: space-between; padding: 10px;}
-.card-icon img{ width: 50px; height: 50px; background-color: #686969; padding: 30px; border-radius: 50%;}
-.card:hover {background-color: rgb(62, 62, 248);border-radius: 40px 40px 40px 230px; transition: 0.4s ease-in-out;}
-.card:hover .card-img {border-radius: 20px 20px 20px 280px; transition: 0.4s ease-in-out;}
-.card:hover .card-icon img {display: none;}
-.card:hover .arrow{ display: block; position: absolute; transition: 0.4s ease-in-out; animation: 0.4s ease-in-out fadeinarrow }
-.card:hover .arrow p{ display: block; animation: 0.8s ease-in-out rotatearrow; transform: rotate(-40deg);}
-.text-rotate img{ top: 0; transform: translateX(10px) translateY(-30%); width: 50px; padding: 20px; background-color: #adff08; border-radius: 30px; height: 50px;animation: rotate 2s linear infinite;}
-.shape4 .leaf {position: absolute; width: 600px;}    
-.home-section h1{font-size: 105px; margin: 0px; -webkit-animation: 2.5s ease 0s normal forwards 1 fadein; text-align: center; animation: 2.5s ease 0s normal forwards 1 fadein;}
-.home-section p{-webkit-animation: 4s ease 0s normal forwards 1 fadein; animation: 4s ease 0s normal forwards 1 fadein;text-align: center;}
-.bg-title {padding: 0px 20px 10px 20px; border-radius: 15px; background-color: #adff08; color: #fff;}
-.p-relative {position: relative;}
+.card-icon img { width: 50px; height: 50px; background-color: #686969; padding: 30px; border-radius: 50%;}
+
+/* Stack2 */
+.stack2 { position: relative; justify-content: space-around; display: flex; flex-direction: column;
+  .count-p { position: absolute; left: -93%; bottom: 4%; color: #fff; line-height: 1.4;}
+  h4 { font-size: 60px;  color: aliceblue; font-weight: 500;}
+}
+.create-h { position: relative; width: 63%; height: 77vh;
+  h2 { position: absolute; width:117%; color: #adff08; font-size: 90px; font-family:Arial, Helvetica, sans-serif;}
+}
+.svg-r { position: relative; z-index: 1; display: inline-block;
+  svg { position: relative; z-index: -1; display: block; background-color: #6308ff; padding: 20px; border-radius: 50%;}
+  text { font-size: 17px; transform-origin: center; animation: rotate-btn 8s linear infinite;}
+}
+.count { text-align: end;
+  p { color: #fff;}
+}
+
+/* Recent work */
+.title-2 h3 { font-size: 42px;}
+.stack1-bg { position: absolute; width: 600px; right: 0; z-index: -1;}
+.stack1-bg1 { position: absolute; width: 600px; z-index: -1; left: -10%; z-index: -1; filter: grayscale(1);}
+.stack1 { display: flex; gap: 100px; width: 100%; margin: 150px 0; align-items: flex-start; justify-content: space-between;}
+.stack3 { display: flex; width: 50%; gap: 80px; flex-direction: column; align-items: stretch; justify-content: space-between;}
+.tag { position: relative;
+  h3{ font-size: 33px; margin:15px; color: #6308ff;}
+  p {line-height: 1.4; font-weight: 500; margin:15px;}
+  .img-card { border-radius: 80px; overflow: hidden; transition: 0.4s ease-in-out; width: 100%; }
+  .arrow1 { display: none; transition: 0.4s ease-in-out; animation: 0.4s ease-in-out fadeinarrow; 
+    .svg-r { position: relative; z-index: 1; display: inline-block;
+      svg { position: relative; z-index: -1; display: block; background-color: #adff08; padding: 20px; border-radius: 50%;}
+      text { font-size: 13px; transform-origin: center; animation: rotate-btn 8s linear infinite; text-transform: uppercase;} 
+    }
+  }
+}
+.tag:hover {
+  .img-card { border-radius: 80px 400px 80px 80px;}
+  .arrow1 { display: block; position: absolute; right: 0%; transition: 0.4s ease-in-out; animation: 0.4s ease-in-out fadeinarrow }
+}
+
+/* Keyframes */
 @keyframes bounce { 0% {transform: translateY(0);}  60% {transform: translateY(25px);} 100% {transform: translateY(0);}}
 @keyframes rotate { from {transform: translateY(0%) rotate(0deg);}to{ transform: translateY(0%) rotate(360deg);}} 
-@keyframes rotatearrow { from{transform: translateY(0%) rotate(0deg);}to{ transform: translateY(0%) rotate(-40deg);} }
+@keyframes rotatearrow { from {transform: translateY(0%) rotate(0deg);}to{ transform: translateY(0%) rotate(-40deg);} }
 @keyframes fadein{ 0% {transform: translateY(-90px);} 100% { opacity:1; transform: translateY(0px);}}
 @keyframes fadeinarrow{ 0% { opacity:0; } 20% { opacity:0.2; } 40% { opacity:0.4; } 60% { opacity:0.6; } 80% { opacity:0.8; } 100% { opacity:1; }}
+@keyframes rotate-btn{ to { transform: rotate(360deg); }}
