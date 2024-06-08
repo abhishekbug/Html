@@ -1,12 +1,12 @@
-:-webkit-any(article, aside, nav, section) h1, h2, h3, h4, h5, h6 { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0;}
-body { margin: 0;padding: 0;}
+:-webkit-any(article, aside, nav, section) h1, h2, h3, h4, h5, h6, p, a { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0;}
+body { margin: 0 25px 25px 25px;border-left: 1px solid #b0b0b0; border-right: 1px solid #b0b0b0; height: auto;}
 section { padding: 100px 0; height: 80vh;}
 p { font-size: 20px; font-weight: 400; margin: 0px; color: rgb(59, 59, 59);}
 .p-relative {position: relative;}
 
 /* Home Banner */
-.home-section { position: relative; flex-direction: column; margin:0 auto;justify-content: center; display: flex; max-width:1350px; height: 80vh;
-  h1 { font-size: 105px; margin: 0px; -webkit-animation: 2.5s ease 0s normal forwards 1 fadein; text-align: center; animation: 2.5s ease 0s normal forwards 1 fadein;}
+.home-section { position: relative; flex-direction: column; margin:0 auto;justify-content: center; display: flex; max-width:1350px; height: 80vh; padding-bottom: 100px;
+  h1 { font-size: 127px; margin: 0px; -webkit-animation: 2.5s ease 0s normal forwards 1 fadein; text-align: center; animation: 2.5s ease 0s normal forwards 1 fadein;}
   p { -webkit-animation: 4s ease 0s normal forwards 1 fadein; animation: 4s ease 0s normal forwards 1 fadein;text-align: center;}
 }
 .title-rotate { display: inline-block; position: relative;
@@ -15,26 +15,26 @@ p { font-size: 20px; font-weight: 400; margin: 0px; color: rgb(59, 59, 59);}
 .bg-title { padding: 0px 20px 10px 20px; border-radius: 15px; background-color: #adff08; color: #fff;}
 
 /* Nav */
-.topnav { overflow: hidden;position: fixed; display: flex; align-items: center;justify-content: center; width: 100%;
-  .logo { padding: 20px; width: 60px;}
+.topnav { overflow: hidden; display: flex; align-items: center;justify-content: center; width: 100%;
+  .logo { padding: 20px; width: 50px;}
 }
 
 /* Shapes */
 .shape1 { -webkit-animation: 1s ease 0s normal forwards 1 fadein; animation: 1s ease 0s normal forwards 1 fadein;position: absolute; left: 10%; bottom: 15%; z-index: 3;}
 .shape2 { -webkit-animation: 1s ease 0s normal forwards 1 fadein; animation: 1s ease 0s normal forwards 1 fadein;position: absolute; right: 7%;z-index: 3;}
-.shape3 { left: -2%; top: -5%; position: absolute;rotate: -10deg; animation: bounce 4s ease-in-out infinite;
+.shape3 { left: 2%; top: 2%; position: absolute;rotate: -10deg; animation: bounce 4s ease-in-out infinite;
   .shape3-p { -webkit-animation: 1s ease 0s normal forwards 1 fadein; width: 300px; height: 300px; border-radius: 15px 15px 50% 50%; animation: 1s ease 0s normal forwards 1 fadein;position: relative; overflow: hidden; z-index: -1;
     .leaf { position: absolute; width: 600px;}
   }
 }
-.shape4 { right: -2%; bottom: -5%; position: absolute;rotate: -80deg; animation: bounce 5s ease-in-out infinite;
+.shape4 { right: -2%; bottom: 10%; position: absolute;rotate: -80deg; animation: bounce 5s ease-in-out infinite;
   .shape4-p {-webkit-animation: 1s ease 0s normal forwards 1 fadein; width: 300px; height: 250px; border-radius: 15px 15px 80% 15px; animation: 1s ease 0s normal forwards 1 fadein;position: relative; overflow: hidden; z-index: -1;
     .leaf {position: absolute; width: 600px;} 
   }
 }
 
 /* Stack1 */
-.bg-padding { padding: 70px; border-radius: 80px; height: auto;}
+.bg-padding { padding: 50px; border-radius: 80px; height: auto;}
 .bg-padding:hover { .stack .card1 {animation-delay: 1s; animation: 0.2s ease-in-out fadein;}
   .stack .card2 { animation-delay: 2s; animation: 0.4s ease-in-out fadein;}
   .stack .card3 { animation-delay: 3s; animation: 0.6s ease-in-out fadein;}
@@ -45,7 +45,7 @@ p { font-size: 20px; font-weight: 400; margin: 0px; color: rgb(59, 59, 59);}
 }
 .stack { display: flex; flex-direction: row; gap: 20px; box-sizing: border-box; align-items: stretch; margin: 80px 0; justify-content: space-between;}
 .card { background-color: #434343; width: 32.33%; border-radius: 40px; transition: 0.4s ease-in-out; height: 500px; position: relative;
-  h1 { color: #adff08; font-size: 45px; padding: 10px 25px; text-align: left; line-height: 1.1;}
+  h3 { color: #adff08; font-size: 45px; padding: 10px 25px; text-align: left; line-height: 1.1;}
   p { color: aliceblue; margin-top: 20px; font-weight: 200; line-height: 1.6; font-size: 18px; text-align: justify; font-family: sans-serif; padding: 0 36px;}
   .arrow { transition: 0.4s ease-in-out; display: none; animation: 0.4s ease-in-out fadeinarrow ; position: absolute; width: 110px; height: 110px; bottom: 1px; border-radius: 50%; left: 1px; background-color: #adff08; border: 7px solid black;}
 }
@@ -95,6 +95,30 @@ p { font-size: 20px; font-weight: 400; margin: 0px; color: rgb(59, 59, 59);}
 .tag:hover {
   .img-card { border-radius: 80px 400px 80px 80px;}
   .arrow1 { display: block; position: absolute; right: 0%; transition: 0.4s ease-in-out; animation: 0.4s ease-in-out fadeinarrow }
+}
+
+/* footer banner */
+.footer-banner { padding: 70px; border-radius: 80px; height: auto;
+  .text-zone { padding: 40px 0;  position: relative;
+    h1 { font-size: 90px; margin: 0px; color: #fff; text-transform: uppercase; -webkit-animation: 2.5s ease 0s normal forwards 1 fadein; text-align: center; animation: 2.5s ease 0s normal forwards 1 fadein; margin-bottom: 20px;}
+    p { text-align: center; font-weight: 500; color: aliceblue;}
+    .absolute { position: absolute; right: 5%; bottom: 5%;
+      .svg-r { position: relative; z-index: 1; display: inline-block;
+        svg { position: relative; z-index: -1; display: block; background-color: #6308ff; padding: 20px; border-radius: 50%;}
+        text { font-size: 13px; transform-origin: center; animation: rotate-btn 8s linear infinite; text-transform: uppercase;} 
+      }
+    }
+  }
+  .flex { display: flex; text-align: left; justify-content: space-between; margin-top: 30px;
+    h6 {color: #adff08; font-size: 30px; margin-bottom: 10px;}
+    p {color: #fff; line-height: 1.5;}
+    .relative { position:relative; align-items: end; display: flex; flex-direction: column; justify-content: space-around;
+      .buttons { flex-direction: row; display: flex; align-items: flex-start;
+      p { padding: 15px 25px; font-size: 20px; margin-left: 10px; border-radius: 30px; border: 0.8px solid rgb(141, 133, 133); color: #fff; }
+      a {color: #979797; margin-left: 40px; font-size: 20px;}
+    }
+  }
+}
 }
 
 /* Keyframes */
